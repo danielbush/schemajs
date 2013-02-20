@@ -10,6 +10,7 @@ see <http://www.gnu.org/licenses/>.
 // Convenience for dev/testing work only.
 
 var schema3   = $dlb_id_au$.schema.schema3;
+var sets      = $dlb_id_au$.schema.sets;
 var data = $dlb_id_au$.unitJS.data;
 var tests = data.makeTests(); 
 tests.name = 'All';

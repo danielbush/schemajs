@@ -28,7 +28,7 @@ tests.items.push(with_tests$('01.utils',function(M){
       var s,r,result;
 
       // Make a set.
-      var set = schema3.withNewSet('set1',function(o){
+      var set = sets.withNewSet('set1',function(o){
         // Make a definition:
         o.add('foo',{
           a:[{b:null}]
@@ -59,7 +59,7 @@ tests.items.push(with_tests$('01.utils',function(M){
     M.test('Create receivers for a set...',function(){
       var r,s,result,set;
 
-      set = schema3.withNewSet('set1',function(o){
+      set = sets.withNewSet('set1',function(o){
         // Make a definition:
         o.add('foo',{
           a:[{b:null}]
@@ -72,7 +72,7 @@ tests.items.push(with_tests$('01.utils',function(M){
       });
 
       result = {called:0,o:null};
-      r = schema3.receiversFor(set,{
+      r = sets.receiversFor(set,{
         foo:function(o){
           result.called++;
           result.o = o;

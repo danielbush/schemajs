@@ -82,7 +82,7 @@ If you keep on with this sort of madness, you may find yourself wanting to be ab
 
 Here we create a set of types called 'set1' and give it one "type" called 'foo':
 ```js
-  set = schema3.withNewSet('set1',function(o){
+  set = sets.withNewSet('set1',function(o){
     // Make a definition:
     o.add('foo',{
       a:[{b:null}]
@@ -103,7 +103,7 @@ Then you can formalise this understanding by using 'receiversFor'.
 It doesn't really attempt to validate.
 
 ```js
-      r = schema3.receiversFor(set,{
+      r = sets.receiversFor(set,{
         foo:function(o){
           console.log(o);  // print this instance of set.types['foo'].
         }
