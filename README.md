@@ -23,7 +23,7 @@ For the discussion below:
 * D|V = "D or V"
 
 There are 4 types of defns:
-* array, D = [D|V] (this means D is an array of nested defns or values)
+* array, D = \[D|V\] (this means D is an array of nested defns or values)
 * keyed array;  D = {_key_:D|V}
   Similar to array, except now you specify the key instead of an index.
 * assoc array 
