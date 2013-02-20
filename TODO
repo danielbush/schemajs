@@ -1,0 +1,19 @@
+// [TODO]
+// Who: danb, Sat Jan 19 18:05:15 EST 2013
+// [1a] be able to create structures with default values; atm when we
+// make an instance of a schema, we have to specify something in order
+// for it to be there.
+// [1b] Suppose we have a nested definition with an object or array, it
+// would be nice to be able to have a blank array or object present.
+// Or would it? The situation like [3] below can arise, where we have
+// an existing instance of an ND (nested definition), that we want to
+// insert into something -- see [3].
+// [2] add controlled vocab or enum-like values; just for V's not
+// definitions.  Example: a boolean type which forces you to only use
+// true/false, or a range, or a set of allowed values.
+// [3] where we have a nested definition ND in some definition D that we
+// use as a definition in its own right, is there some way we can
+// update D with an existing instance of ND.  Atm, if we use
+// withInstance, we're basically having to iterate through the whole
+// thing generate a copy into an instance of D.
+
