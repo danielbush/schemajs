@@ -22,15 +22,15 @@ For the discussion below:
 * V = value, an actual value eg number, string, function
 * D|V = "D or V"
 
-There are 4 types of defns:
-* array, D = \[D|V\] (this means D is an array of nested defns - the 2nd D - or values (V).  We use 'D' to mean 2 different definitions here.)
-* keyed array;  D = {_key_:D|V}
-  Similar to array, except now you specify the key instead of an index.
-* assoc array 
-  This is like a keyed array, but the keys are fixed in the definition:
-  {a:D|V,b:D|V,...} where a,b are specified set of keys
+There are 4 types of defns (D):
+* array: D = \[D|V\] 
+    * this means D is an array of nested defns - the 2nd D - or values (V).  We use 'D' to mean 2 different definitions here.
+* keyed array:  D = {_key_:D|V}
+    * Similar to array, except now you specify the key instead of an index.
+* assoc array:  {a:D|V,b:D|V,...} where a,b are specified set of keys
+    * This is like a keyed array, but the keys are fixed in the definition:
 * values (V) (eg null,1,true,functions etc)
-  This is like a terminal symbol in a grammar.
+    * This is like a terminal symbol in a grammar.
 
 Each definition except for V, may be recursively defined So arrays
 could be arrays of nested defns, similarly keyed arrays etc
