@@ -83,13 +83,17 @@ If you keep on with this sort of madness, you may find yourself wanting to be ab
 Here we create a set of types called 'set1' and give it one "type" called 'foo':
 ```js
   set = sets.withNewSet('set1',function(o){
-    // Make a definition:
+    // Make a definition:  (calls schema3.gen behind the scenes)
     o.add('foo',{
       a:[{b:null}]
     });
   });
+```
+Now we can make instances of our "types" in a similar way to the standalone example above:
+```js
   s = set.types['foo'].make(function(o){...});
 ```
+
 
 In practice, what this does is add 2 properties to instances generated via a set.
 ```js
