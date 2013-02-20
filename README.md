@@ -64,6 +64,18 @@ Now we create a generator that can create javascript objects of this form:
 Now go look at tests/.
 
 
+Extending an existing instance
+------------------------------
+You can take an instance and update it like this:
+```js
+    m.withInstance(s,function(o){
+      o.a.push(function(o){
+        o.b.set(12);
+      });
+    });
+```
+
+
 Naming definitions and grouping them
 ------------------------------------
 If you keep on with this sort of madness, you may find yourself wanting to be able to name these definitions (also referred to as "types").  And if you want to name them, it also makes sense to namespace the names, to say "this named thing belongs to this set of types".
@@ -83,4 +95,18 @@ In practice, what this does is add 2 properties to instances generated via a set
 ```js
   s._type_ = 'foo'
   s._set_ = 'set1'
+```
+
+Now suppose that you know of some component that emits information using a particular signal that comes from a particular set.
+Then you can formalise this understanding by using 'receiversFor'.
+'receiversFor' looks for _type_ and _set_ attributes.
+It doesn't really attempt to validate.
+
+```js
+      r = schema3.receiversFor(set,{
+        foo:function(o){
+          console.log(o);  // print this instance of set.types['foo'].
+        }
+      });
+      r(s);  // Will process 's'.
 ```
